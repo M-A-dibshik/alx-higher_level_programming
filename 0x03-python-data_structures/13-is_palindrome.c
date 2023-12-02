@@ -16,8 +16,9 @@ int is_palindrom(listint_t **head)
  * aux_palind - funct to know if palindrome
  * @head: head list
  * @end: end list
+ * Return: Alowys success
 */
-void aux_palind(listint_t **head, listint_t *end)
+int aux_palind(listint_t **head, listint_t *end)
 {
 	if (end == NULL)
 		return (1);
