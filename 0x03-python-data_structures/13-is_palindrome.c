@@ -3,7 +3,7 @@
  * is_palindrom - recursive palind or not
  * @head: head list
  * Return: 0 if it is not a palindrome
- * 1 if it is a palindrome
+ *	1 if it is a palindrome
 */
 int is_palindrom(listint_t **head)
 {
@@ -16,6 +16,7 @@ int is_palindrom(listint_t **head)
  * aux_palind - funct to know if palindrome
  * @head: head list
  * @end: end list
+ * Return: 0
 */
 int aux_palind(listint_t **head, listint_t *end)
 {
