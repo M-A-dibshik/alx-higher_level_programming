@@ -1,31 +1,40 @@
+#include <stddef.h>
 #include "lists.h"
 
 /**
- * is_palindrome - recursive palind or not
- * @head:head list
- * Return: 0 if it is not a palindrome
- *	1 if it is a palindrome
-*/
+ * is_palindrome - Checks if a singly linked list is a palindrome
+ * @head: Pointer to the head of the linked list
+ * Return: 1 if it is a palindrome, 0 otherwise
+ */
 int is_palindrome(listint_t **head)
 {
-	if (head == NULL || *head == NULL)
-		return (1);
-	return (aux_palind(head, *head));
-}
+	listint_t *slow = *head;
+	listint_t *fast = *head;
+	listint_t *prev = NULL;
+	listint_t *temp;
 
-/**
- * aux_palind - funct to know is palindrome
- * @head: head list
- * @end: end list
- * Return: Nothing
-*/
-int aux_palind(listint_t **head, listint_t *end)
-{
-	if (end == NULL)
+	if (*head == NULL || (*head)->next == NULL)
 		return (1);
-	if (aux_palind(head, end->next) && (*head)->n == end->n)
+
+	while (fast != NULL && fast->next != NULL)
 	{
-		*head = (*head)->next;
-		return (1);
+		fast = fast->next->next;
+		temp = slow->next;
+		slow->next = prev;
+		prev = slow;
+		slow = temp;
 	}
+
+	if (fast != NULL)
+		slow = slow->next;
+
+	while (prev != NULL && slow != NULL)
+	{
+		if (prev->n != slow->n)
+			return (0);
+		prev = prev->next;
+		slow = slow->next;
+	}
+
+	return (1);
 }
