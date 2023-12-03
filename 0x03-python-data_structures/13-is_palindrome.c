@@ -1,11 +1,12 @@
 #include "lists.h"
+
 /**
- * is_palindrom - recursive palind or not
- * @head: head list
+ * is_palindrome - recursive palind or not
+ * @head:head list
  * Return: 0 if it is not a palindrome
  *	1 if it is a palindrome
 */
-int is_palindrom(listint_t **head)
+int is_palindrome(listint_t **head)
 {
 	if (head == NULL || *head == NULL)
 		return (1);
@@ -13,10 +14,10 @@ int is_palindrom(listint_t **head)
 }
 
 /**
- * aux_palind - funct to know if palindrome
+ * aux_palind - funct to know is palindrome
  * @head: head list
  * @end: end list
- * Return: Alowys success
+ * Return: Nothing
 */
 int aux_palind(listint_t **head, listint_t *end)
 {
@@ -27,5 +28,4 @@ int aux_palind(listint_t **head, listint_t *end)
 		*head = (*head)->next;
 		return (1);
 	}
-	return (0);
 }
