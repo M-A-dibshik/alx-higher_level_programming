@@ -2,4 +2,5 @@
 """" Square"""
 
 class Square:
+	"""Defines"""
 	pass
