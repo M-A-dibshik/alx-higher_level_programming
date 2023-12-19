@@ -5,7 +5,7 @@
 class Square:
     """Define"""
 
-    def __int__(self, size):
+    def __init__(self, size):
         """constr
 
         Args:
