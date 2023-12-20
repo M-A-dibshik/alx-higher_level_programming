@@ -6,35 +6,23 @@ class Square:
     """Define"""
 
     def __init__(self, size=0):
-        """Constr
-
-        Args:
-                size: length of a side of square
-        """
+        """Constructor"""
         self.size = size
 
     @property
     def size(self):
-        """property for the length of a side of square
-
-        Raises:
-            TypeError: if size is not integer
-             ValueError: is size is less than 0
-        """
+        """Property for the length of a side of square"""
         return self.__size
 
     @size.setter
     def size(self, value):
+        """Setter for size attribute"""
         if not isinstance(value, int):
             raise TypeError('size must be an integer')
         if value < 0:
             raise ValueError('size must be >= 0')
-        self.size = value
+        self.__size = value
 
     def area(self):
-        """Args of square
-
-        Return:
-                the size square
-        """
+        """Area of square"""
         return self.__size ** 2
