@@ -8,18 +8,17 @@ class Square:
     def __init__(self, size=0):
         """Constr
 
-
         Args:
-                size: length os side of square
+            size: length os side of square
 
         Raises:
                 TypeError: if size not integer
                 ValueError: if size less than 0
         """
         if not isinstance(size, int):
-            raise TypeError("size must be an integer")
+            raise TypeError('size must be an integer')
         if size < 0:
-            raise ValueError("size must be >= 0")
+            raise ValueError('size must be >= 0')
         self.__size = size
 
         def area(self):
@@ -29,4 +28,4 @@ class Square:
                     size square
 
             """
-            return self.__size**2
+            return self.__size ** 2
