@@ -1,25 +1,34 @@
 #!/usr/bin/python3
-"""
-Define
-"""
+'''module'''
 
 
 class Rectangle:
-    """Representation"""
+    '''define class'''
 
     number_of_instances = 0
+    '''int number'''
 
     print_symbol = '#'
+    '''type print_symbol'''
 
     def __init__(self, width=0, height=0):
-        """Initializes"""
+        '''Constructor
+        
+        Args:
+        	width: of rectangle
+            height: of rectangle'''
         self.height = height
         self.width = width
         Rectangle.number_of_instances += 1
 
     @property
     def width(self):
-        """getter"""
+        '''Property
+        
+        Raises:
+        	TypeError: if is not integer
+            ValueErrorJ: if is less than 0
+        '''
         return self.__width
 
     @width.setter
