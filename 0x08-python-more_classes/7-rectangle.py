@@ -66,17 +66,16 @@ class Rectangle:
 
     def __str__(self):
         """return"""
-        string = ""
         if not self.width or not self.height:
           return ""
         return ((str(self.print_symbol) * self.width + "\n") *
                 self.height) [:-1]
 
     def __repr__(self):
-        """return """
+        '''returns'''
         return "Rectangle(" + str(self.width) + ", " + str(self.height) + ")"
 
     def __del__(self):
-        """print message"""
+        '''print message'''
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
