@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Define a class
+Define a class Rectangle
 """
 
 
@@ -9,7 +9,7 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """Initializes the rectangle"""
-        self.heigh = height
+        self.height = height
         self.width = width 
 
     @property
